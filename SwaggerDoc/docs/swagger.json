@@ -1,0 +1,160 @@
+{
+    "schemes": [
+        "http"
+    ],
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a sample server server.",
+        "title": "Gin Swagger Example API",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "name": "API Support",
+            "url": "http://www.swagger.io/support",
+            "email": "support@swagger.io"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "2.0"
+    },
+    "host": "localhost:8060",
+    "basePath": "/",
+    "paths": {
+        "/emp": {
+            "get": {
+                "description": "Get All Employee Details",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "emp"
+                ],
+                "summary": "Get All Employee Details",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": true
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "Post Employee Details",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "emp"
+                ],
+                "summary": "Post Employee Details",
+                "parameters": [
+                    {
+                        "description": "Create Employee",
+                        "name": "emp",
+                        "in": "body",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": true
+                        }
+                    }
+                }
+            },
+            "/emp/{id}": {
+                "get": {
+                    "description": "Get Employee details with ID",
+                    "consumes": [
+                        "application/json"
+                    ],
+                    "produces": [
+                        "application/json"
+                    ],
+                    "tags": [
+                        "emp"
+                    ],
+                    "summary": "Get Employee details with ID",
+                    "parameters": [
+                        {
+                            "description": "Get Employee",
+                            "name": "emp",
+                            "in": "body",
+                            "required": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK"
+                        }
+                    }
+                },
+                "put": {
+                    "description": "Update Employee with ID",
+                    "consumes": [
+                        "application/json"
+                    ],
+                    "produces": [
+                        "application/json"
+                    ],
+                    "tags": [
+                        "emp"
+                    ],
+                    "summary": "Update Employee with ID",
+                    "parameters": [
+                        {
+                            "description": "Update Employee",
+                            "name": "emp",
+                            "in": "body",
+                            "required": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK"
+                            }
+                        }
+                    }
+                },
+                "delete": {
+                    "description": "Delete Employee with ID",
+                    "consumes": [
+                        "application/json"
+                    ],
+                    "produces": [
+                        "application/json"
+                    ],
+                    "tags": [
+                        "emp"
+                    ],
+                    "summary": "Delete Employee with ID",
+                    "parameters": [
+                        {
+                            "description": "Delete Employee",
+                            "name": "emp",
+                            "in": "body",
+                            "required": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK"
+                        }
+                    }
+                }
+            }
+        }
+    }
+

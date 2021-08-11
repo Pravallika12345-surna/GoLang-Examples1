@@ -1,0 +1,117 @@
+basePath: /
+host: localhost:8060
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: This is a sample server server.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Gin Swagger Example API
+  version: "2.0"
+paths:
+  /emp:
+    get:
+      consumes:
+      - application/json
+      description: Get All Employee Details.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Get All Employee Details.
+      tags:
+      - emp
+      post:
+      consumes:
+      - application/json
+      description: Post Employee Details.
+      parameters:
+      - description: Create Employee
+        in: body
+        name: id
+        required: true
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Post Employee Details.
+      tags:
+      - emp
+      get:
+      consumes:
+      - application/json
+      description: Get Employee Details by ID.
+       parameters:
+      - description: GET Employee
+        in: body
+        name: id
+        required: true
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Get Employee Details by ID.
+      tags:
+      - emp
+      put:
+      consumes:
+      - application/json
+      description: Update Employee Details by ID
+       parameters:
+      - description: Update Employee
+        in: body
+        name: id
+        required: true
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+           additionalProperties: true
+            type: object
+      summary: Update Employee Details by ID
+      tags:
+      - emp 
+      delete:
+      consumes:
+      - application/json
+      description: Delete Employee Details by ID
+       parameters:
+      - description: Delete Employee
+        in: body
+        name: id
+        required: true
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+           additionalProperties: true
+            type: object
+      summary: Delete Employee Details by ID
+      tags:
+      - emp 
+schemes:
+- http
+swagger: "2.0"
+
+
+
